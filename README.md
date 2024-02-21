@@ -16,9 +16,13 @@ Connect Pin 9, 10 and Ground:
 
 ## With SD Card: 
 
-SD card via SPI:
+In addition to the above:
  * MOSI - pin 11
  * MISO - pin 12
  * CLK - pin 13
  * CS - pin 4 
 
+Then connect 3v power, Ground.
+
+
+![6C18D19F-E417-4D01-83F4-2C12D93176B2_4_5005_c](https://github.com/omiq/arduino-sid-player/assets/3143825/c48b72ab-bd48-4eca-a225-463bac40a005)
