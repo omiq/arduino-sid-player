@@ -102,8 +102,8 @@ void setup()  {
   while (!Serial) {
     ; // wait for serial port 
   }
-
-  Serial.print("Initializing SD card...");
+  Serial.print("\f\n\n");
+  Serial.println("Initializing SD card...");
 
   if (!SD.begin(4)) {
     Serial.println("initialization failed!");
@@ -114,12 +114,15 @@ void setup()  {
   // Open root directory and display the results
   root = SD.open("/");
   read_directory(root, 0);
-  char chosen_file[13];
-  randomSeed(analogRead(A0));
-  playlist[random(num_files-1)].toCharArray(chosen_file, 13);
-  Serial.println("Directory read. Loading tune " + String(chosen_file));
+  Serial.println("Directory read."); 
 
   // open random sid dump
+  char chosen_file[13];
+  for(int r; r < random(100); r++) {
+    randomSeed(analogRead(0));
+    playlist[(int)random(0,num_files-1)].toCharArray(chosen_file, 13);
+  }
+  Serial.println("Loading tune " + String(chosen_file));
   int res=load_sid(chosen_file);
 
 } 
