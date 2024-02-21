@@ -88,12 +88,12 @@ void setup()  {
 
   // 
   // Open the file for reading:
-  myFile = SD.open("COMMA~76.DMP");
+  myFile = SD.open("COMMANDO.DMP");
   if (myFile) {
-    Serial.println("OPENED COMMA~76.DMP:");
+    Serial.println("OPENED COMMANDO.DMP:");
   } else {
     // if the file didn't open, print an error:
-    Serial.println("error opening COMMA~76.DMP");
+    Serial.println("error opening COMMANDO.DMP");
   }
 
 } 
